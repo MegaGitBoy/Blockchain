@@ -34,3 +34,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Create release branch
+        run: git checkout -b release/v${{ github.event.inputs.versionName }}
